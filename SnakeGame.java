@@ -1,11 +1,10 @@
 
-
 public class SnakeGame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+		int diceplayed=0;
 		int Startposition =0;
 		int Total=0;
 		int  Checknum =(int)(Math.random() * 6) + 1;
@@ -14,6 +13,7 @@ public class SnakeGame {
 		
 		System.out.println("Single person Start position is " +Startposition);
 		while(true) {
+			diceplayed=diceplayed+1;
 			int FindOptions= (int)(Math.random() * 3);
 		 if (FindOptions==0) {
 			
@@ -38,12 +38,13 @@ public class SnakeGame {
 				 
 			 }
 			 
-			 System.out.println(" ! oops  player has attacked snake current position is " +Total);
+			 System.out.println(" oops player has attacked snake current position is " +Total);
 			 
 		 }
 		 
 		}
-
+		System.out.println(" number of times person played is  " +diceplayed);
+		 
 	}
 
 }
