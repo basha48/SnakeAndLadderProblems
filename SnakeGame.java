@@ -1,4 +1,5 @@
 
+
 public class SnakeGame {
 
 	public static void main(String[] args) {
@@ -6,28 +7,42 @@ public class SnakeGame {
 		
 		
 		int Startposition =0;
-		
-		int  checknum =(int)(Math.random() * 6) + 1;
-		 int FindOptions= (int)(Math.random() * 2);
-		
+		int Total=0;
+		int  Checknum =(int)(Math.random() * 6) + 1;
+		 
+	
 		
 		System.out.println("Single person Start position is " +Startposition);
-		
+		while(true) {
+			int FindOptions= (int)(Math.random() * 3);
 		 if (FindOptions==0) {
+			
 			 System.out.println("player cannot be move because of Position " +FindOptions);
-			 
+			
 		 }
 		 else if (FindOptions==1) {
-			 System.out.println("player  move  " +checknum+ ":steps up ");
+			 Total=Total +Checknum;
+			 System.out.println("player  move  " +Total+ ":steps up ");
+			 if (Total==100) {
 			 
+			
+			 System.out.println("player  win " +Total+ ":steps congracts ");
+			 break;
+			 }
 		 }
 		 
 		 else {
-			 System.out.println(" oops player has attacked snake   " +checknum+ ":steps down ");
+			 Total=Total -Checknum;
+			 if(Total<=0) {
+				 Total= 0;
+				 
+			 }
+			 
+			 System.out.println(" oops player has attacked snake current position is " +Total);
 			 
 		 }
 		 
-		
+		}
 
 	}
 
