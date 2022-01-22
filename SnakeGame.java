@@ -38,7 +38,7 @@ public class SnakeGame {
 				 
 			 }
 			 
-			 System.out.println(" oops player has attacked snake current position is " +Total);
+			 System.out.println(" ! oops  player has attacked snake current position is " +Total);
 			 
 		 }
 		 
